@@ -23,11 +23,10 @@ public class JwtUser implements UserDetails {
                    String username,
                    String firstName,
                    String lastName,
-                   String password,
                    String email,
+                   String password, Collection<? extends GrantedAuthority> authorities,
                    boolean enabled,
-                   Date lastPasswordResetDate,
-                   Collection<? extends GrantedAuthority> authorities) {
+                   Date lastPasswordResetDate) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;

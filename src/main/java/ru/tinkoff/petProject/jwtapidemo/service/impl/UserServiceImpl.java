@@ -11,7 +11,6 @@ import ru.tinkoff.petProject.jwtapidemo.repository.RoleRepository;
 import ru.tinkoff.petProject.jwtapidemo.repository.UserRepository;
 import ru.tinkoff.petProject.jwtapidemo.service.UserService;
 
-import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +43,7 @@ public class UserServiceImpl implements UserService {
 
         User registeredUser = userRepository.save(user);
 
-        log.info("IN register - user: {} seccessfully registered", registeredUser);
+        log.info("IN register - user: {} successfully registered", registeredUser);
 
         return registeredUser;
     }
@@ -79,6 +78,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(Long id) {
         userRepository.deleteById(id);
-        log.info("IN delete - user with id: {} seccesfully deleted");
+        log.info("IN delete - user with id: {} successfully deleted");
     }
 }
